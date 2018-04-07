@@ -27,14 +27,25 @@ class ForecastBO{
         
     }
     
-    static func calculteBestPeriod(forcasts: [Forecast], weatherType: String, daysOfHoliday: Int) -> [HolidayResult]{
+    static private func weatherBelongsToUserChoice(weatherPeriod: String, weathersChoice: [Weather]) -> Bool{
+        for weather in weathersChoice {
+            if weatherPeriod == weather.name{
+                return true
+                
+            }
+        }
+        
+        return false
+    }
+    
+    static func calculteBestPeriod(forcasts: [Forecast], weathersChoice: [Weather], daysOfHoliday: Int) -> [HolidayResult]{
         var accumulatorForcast = [Forecast]()
         var arrayHolidayResult = [HolidayResult]()
         var NextForcastIndex = 0
         var actualIndex = 0
         
         for forcast in forcasts{
-            if weatherType == forcast.weather && (NextForcastIndex == 0 || NextForcastIndex == actualIndex) {
+            if  weatherBelongsToUserChoice(weatherPeriod: forcast.weather, weathersChoice:weathersChoice) && (NextForcastIndex == 0 || NextForcastIndex == actualIndex) {
                 accumulatorForcast.append(forcast)
                 NextForcastIndex = actualIndex + 1
                 
