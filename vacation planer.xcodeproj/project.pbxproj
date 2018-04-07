@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		767D01B92078EE4D00B8D221 /* timetotravel.png in Resources */ = {isa = PBXBuildFile; fileRef = 767D01B82078EE4D00B8D221 /* timetotravel.png */; };
 		767D01BB2078F02100B8D221 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D01BA2078F02100B8D221 /* SplashViewController.swift */; };
+		767D01BE20791EF700B8D221 /* city-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 767D01BD20791EF700B8D221 /* city-filled.png */; };
+		767D01C020791F0100B8D221 /* Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico in Resources */ = {isa = PBXBuildFile; fileRef = 767D01BF20791F0000B8D221 /* Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico */; };
+		767D01C220792CEC00B8D221 /* SearchTravel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D01C120792CEC00B8D221 /* SearchTravel.swift */; };
+		767D01C420792DBB00B8D221 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D01C320792DBB00B8D221 /* CitiesViewController.swift */; };
+		767D01C620793D5D00B8D221 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D01C520793D5D00B8D221 /* WeatherTableViewController.swift */; };
 		E412CA152073D0AB007CEA15 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA142073D0AB007CEA15 /* Weather.swift */; };
 		E412CA172073D0E8007CEA15 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA162073D0E8007CEA15 /* Cities.swift */; };
 		E412CA192073D336007CEA15 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA182073D336007CEA15 /* Temperature.swift */; };
@@ -45,6 +50,11 @@
 /* Begin PBXFileReference section */
 		767D01B82078EE4D00B8D221 /* timetotravel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetotravel.png; sourceTree = "<group>"; };
 		767D01BA2078F02100B8D221 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		767D01BD20791EF700B8D221 /* city-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "city-filled.png"; sourceTree = "<group>"; };
+		767D01BF20791F0000B8D221 /* Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico"; sourceTree = "<group>"; };
+		767D01C120792CEC00B8D221 /* SearchTravel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTravel.swift; sourceTree = "<group>"; };
+		767D01C320792DBB00B8D221 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		767D01C520793D5D00B8D221 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		E412CA142073D0AB007CEA15 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E412CA162073D0E8007CEA15 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		E412CA182073D336007CEA15 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 		767D01B72078EE2F00B8D221 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				767D01BD20791EF700B8D221 /* city-filled.png */,
+				767D01BF20791F0000B8D221 /* Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico */,
 				767D01B82078EE4D00B8D221 /* timetotravel.png */,
 			);
 			path = Images;
@@ -103,6 +115,8 @@
 		767D01BC2078F05900B8D221 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				767D01C520793D5D00B8D221 /* WeatherTableViewController.swift */,
+				767D01C320792DBB00B8D221 /* CitiesViewController.swift */,
 				767D01BA2078F02100B8D221 /* SplashViewController.swift */,
 			);
 			name = UI;
@@ -117,6 +131,7 @@
 				E412CA182073D336007CEA15 /* Temperature.swift */,
 				E412CA1F2075BE1E007CEA15 /* Forecast.swift */,
 				E412CA242076E33C007CEA15 /* HolidayResult.swift */,
+				767D01C120792CEC00B8D221 /* SearchTravel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -302,7 +317,9 @@
 			files = (
 				E4302B212038A0CC00D787E6 /* LaunchScreen.storyboard in Resources */,
 				E4302B1E2038A0CC00D787E6 /* Assets.xcassets in Resources */,
+				767D01C020791F0100B8D221 /* Icons8-Ios7-Weather-Partly-Cloudy-Rain.ico in Resources */,
 				E4302B1C2038A0CC00D787E6 /* Main.storyboard in Resources */,
+				767D01BE20791EF700B8D221 /* city-filled.png in Resources */,
 				767D01B92078EE4D00B8D221 /* timetotravel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +354,10 @@
 				E412CA2320767A7E007CEA15 /* ForcastBO.swift in Sources */,
 				E412CA192073D336007CEA15 /* Temperature.swift in Sources */,
 				E4302B172038A0CC00D787E6 /* AppDelegate.swift in Sources */,
+				767D01C420792DBB00B8D221 /* CitiesViewController.swift in Sources */,
+				767D01C220792CEC00B8D221 /* SearchTravel.swift in Sources */,
 				767D01BB2078F02100B8D221 /* SplashViewController.swift in Sources */,
+				767D01C620793D5D00B8D221 /* WeatherTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

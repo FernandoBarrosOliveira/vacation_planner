@@ -8,10 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController {
     
-
-    @IBOutlet weak var pickerCity: UIPickerView!
+    
+    @IBOutlet weak var stepperDays: UIStepper!
+    @IBOutlet weak var txtDays: UITextField!
+    @IBOutlet weak var txtCity: UITextField!
+    @IBOutlet weak var textWeather: UITextField!
+    @IBOutlet weak var btnCity: UIButton!
+    @IBOutlet weak var btnWeather: UIButton!
+    
+    var days = 0
+    var city : Cities?
+    var weathers = [Weather]()
     
     var cities = [Cities]()
     
@@ -22,30 +31,41 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
             self.cities = results
         }
-      
+        updateSearch()
+        
     }
 
+    @IBAction func DaysChange(_ sender: Any) {
+        
+        self.txtDays.text = Int((sender as! UIStepper).value).description
+    }
+    
+    override func didMove(toParentViewController parent: UIViewController?) {
+        //txtCity.text = SearchTravel.city?.district
+        updateSearch()
+    }
+   
+    func clearSearch () {
+        
+        SearchTravel.city = nil
+        SearchTravel.days = 1
+        SearchTravel.weather.removeAll()
+    }
+    
+    func updateSearch() {
+        
+        self.textWeather.text = SearchTravel.weather.map{$0.name}.joined(separator: ", ")
+        self.txtCity.text = SearchTravel.city?.district
+        self.txtDays.text = SearchTravel.days?.description
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    @IBAction func UpdateDays(_ sender: Any) {
+        
+        self.days = Int((sender as! UITextField).text!)!
     }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.cities.count
-    }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return self.cities[row].district
-    }
-    
-    
 }
 
