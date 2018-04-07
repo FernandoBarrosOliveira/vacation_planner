@@ -52,22 +52,23 @@ class ForecastBO{
             }else{
                 NextForcastIndex = 0
                 if accumulatorForcast.count > 0{
-                  accumulatorForcast.removeAll()
+                    if accumulatorForcast.count >= daysOfHoliday{
+                        arrayHolidayResult.append(ForecastsToHolidayResult(forcasts: accumulatorForcast))
+                        
+                    }
+                    accumulatorForcast.removeAll()
                 }
             }
             
-            if accumulatorForcast.count == daysOfHoliday{
-                arrayHolidayResult.append(ForecastsToHolidayResult(forcasts: accumulatorForcast))
-                accumulatorForcast.removeAll()
-                NextForcastIndex = 0
-            }
+            
             
             actualIndex = actualIndex + 1
             
         }
-           return arrayHolidayResult
+        return arrayHolidayResult
     }
-  
+    
     
     
 }
+
