@@ -115,7 +115,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-Rf-ATQ">
-                                <rect key="frame" x="93" y="302" width="189" height="54"/>
+                                <rect key="frame" x="90" y="278" width="189" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6112207301" green="0.90731676139999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="28"/>
@@ -123,14 +123,41 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="SearchResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r85-RD-aKg"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-YB-aOA">
-                                <rect key="frame" x="16" y="414" width="337" height="178"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-YB-aOA">
+                                <rect key="frame" x="16" y="340" width="337" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DrY-sG-J8K">
+                                <rect key="frame" x="19" y="385" width="340" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultLabel" textLabel="6p3-mU-RlP" style="IBUITableViewCellStyleDefault" id="nNQ-kN-vez">
+                                        <rect key="frame" x="0.0" y="28" width="340" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nNQ-kN-vez" id="Ray-6E-KGK">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6p3-mU-RlP">
+                                                    <rect key="frame" x="15" y="0.0" width="310" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -147,9 +174,11 @@
                     <connections>
                         <outlet property="btnCity" destination="Jmn-jY-zcL" id="lfB-qL-ZvI"/>
                         <outlet property="btnWeather" destination="4Vg-jL-EWO" id="Cq1-8p-rbK"/>
+                        <outlet property="labelResult" destination="2TB-YB-aOA" id="iyf-uO-Kjy"/>
                         <outlet property="searchDisplayController" destination="abT-xg-U1a" id="vy5-uR-VwQ"/>
                         <outlet property="stepperDays" destination="MKL-Aq-K2P" id="vG3-dk-euA"/>
                         <outlet property="textWeather" destination="x4I-KO-O3O" id="5Zm-LA-oDH"/>
+                        <outlet property="tvResult" destination="DrY-sG-J8K" id="xBJ-jK-G3T"/>
                         <outlet property="txtCity" destination="6F5-cz-3UN" id="aeU-nb-AQe"/>
                         <outlet property="txtDays" destination="u04-rL-YYr" id="Ffc-NL-6OF"/>
                     </connections>
