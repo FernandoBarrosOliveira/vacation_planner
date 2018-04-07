@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		767D01B92078EE4D00B8D221 /* timetotravel.png in Resources */ = {isa = PBXBuildFile; fileRef = 767D01B82078EE4D00B8D221 /* timetotravel.png */; };
+		767D01BB2078F02100B8D221 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767D01BA2078F02100B8D221 /* SplashViewController.swift */; };
 		E412CA152073D0AB007CEA15 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA142073D0AB007CEA15 /* Weather.swift */; };
 		E412CA172073D0E8007CEA15 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA162073D0E8007CEA15 /* Cities.swift */; };
 		E412CA192073D336007CEA15 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA182073D336007CEA15 /* Temperature.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		767D01B82078EE4D00B8D221 /* timetotravel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetotravel.png; sourceTree = "<group>"; };
+		767D01BA2078F02100B8D221 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E412CA142073D0AB007CEA15 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E412CA162073D0E8007CEA15 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		E412CA182073D336007CEA15 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
@@ -88,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		767D01B72078EE2F00B8D221 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				767D01B82078EE4D00B8D221 /* timetotravel.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		767D01BC2078F05900B8D221 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				767D01BA2078F02100B8D221 /* SplashViewController.swift */,
+			);
+			name = UI;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		E412CA132073D055007CEA15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +160,8 @@
 		E4302B152038A0CC00D787E6 /* vacation planer */ = {
 			isa = PBXGroup;
 			children = (
+				767D01BC2078F05900B8D221 /* UI */,
+				767D01B72078EE2F00B8D221 /* Images */,
 				E412CA2120767A54007CEA15 /* BO */,
 				E412CA1A20743C11007CEA15 /* Service */,
 				E412CA132073D055007CEA15 /* Model */,
@@ -280,6 +303,7 @@
 				E4302B212038A0CC00D787E6 /* LaunchScreen.storyboard in Resources */,
 				E4302B1E2038A0CC00D787E6 /* Assets.xcassets in Resources */,
 				E4302B1C2038A0CC00D787E6 /* Main.storyboard in Resources */,
+				767D01B92078EE4D00B8D221 /* timetotravel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +337,7 @@
 				E412CA2320767A7E007CEA15 /* ForcastBO.swift in Sources */,
 				E412CA192073D336007CEA15 /* Temperature.swift in Sources */,
 				E4302B172038A0CC00D787E6 /* AppDelegate.swift in Sources */,
+				767D01BB2078F02100B8D221 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,13 +503,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "vacation planer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fa7.vacation-planer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -492,13 +521,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "vacation planer/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fa7.vacation-planer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

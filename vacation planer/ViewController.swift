@@ -8,25 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
 
+    @IBOutlet weak var pickerCity: UIPickerView!
+    
+    var cities = [Cities]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        WeatherService.getForecast(codeCity: "455823", year: "2015") { (results:[Forecast]) in
-            var arrayHolidayResult = [HolidayResult]()
-            arrayHolidayResult = ForecastBO.calculteBestPeriod(forcasts: results, weatherType: "windy", daysOfHoliday: 2)
-            for holidayResult in arrayHolidayResult{
-                print(holidayResult.dateInit! + " - " + holidayResult.dateInit!)
-            }
+        
+        WeatherService.getCities() { (results:[Cities]) in
+
+            self.cities = results
         }
+      
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // The number of columns of data
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.cities.count
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.cities[row].district
+    }
+    
+    
 }
 
