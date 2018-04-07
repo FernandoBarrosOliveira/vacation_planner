@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E412CA152073D0AB007CEA15 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA142073D0AB007CEA15 /* Weather.swift */; };
+		E412CA172073D0E8007CEA15 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA162073D0E8007CEA15 /* Cities.swift */; };
+		E412CA192073D336007CEA15 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA182073D336007CEA15 /* Temperature.swift */; };
+		E412CA1C20743CD0007CEA15 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA1B20743CD0007CEA15 /* WeatherService.swift */; };
+		E412CA202075BE1E007CEA15 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA1F2075BE1E007CEA15 /* Forecast.swift */; };
+		E412CA2320767A7E007CEA15 /* ForcastBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA2220767A7E007CEA15 /* ForcastBO.swift */; };
+		E412CA252076E33C007CEA15 /* HolidayResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E412CA242076E33C007CEA15 /* HolidayResult.swift */; };
 		E4302B172038A0CC00D787E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4302B162038A0CC00D787E6 /* AppDelegate.swift */; };
 		E4302B192038A0CC00D787E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4302B182038A0CC00D787E6 /* ViewController.swift */; };
 		E4302B1C2038A0CC00D787E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4302B1A2038A0CC00D787E6 /* Main.storyboard */; };
@@ -34,6 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E412CA142073D0AB007CEA15 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		E412CA162073D0E8007CEA15 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		E412CA182073D336007CEA15 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		E412CA1B20743CD0007CEA15 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		E412CA1F2075BE1E007CEA15 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		E412CA2220767A7E007CEA15 /* ForcastBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastBO.swift; sourceTree = "<group>"; };
+		E412CA242076E33C007CEA15 /* HolidayResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayResult.swift; sourceTree = "<group>"; };
 		E4302B132038A0CC00D787E6 /* vacation planer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vacation planer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4302B162038A0CC00D787E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4302B182038A0CC00D787E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +88,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E412CA132073D055007CEA15 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E412CA142073D0AB007CEA15 /* Weather.swift */,
+				E412CA162073D0E8007CEA15 /* Cities.swift */,
+				E412CA182073D336007CEA15 /* Temperature.swift */,
+				E412CA1F2075BE1E007CEA15 /* Forecast.swift */,
+				E412CA242076E33C007CEA15 /* HolidayResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E412CA1A20743C11007CEA15 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E412CA1B20743CD0007CEA15 /* WeatherService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E412CA2120767A54007CEA15 /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				E412CA2220767A7E007CEA15 /* ForcastBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
 		E4302B0A2038A0CC00D787E6 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +139,9 @@
 		E4302B152038A0CC00D787E6 /* vacation planer */ = {
 			isa = PBXGroup;
 			children = (
+				E412CA2120767A54007CEA15 /* BO */,
+				E412CA1A20743C11007CEA15 /* Service */,
+				E412CA132073D055007CEA15 /* Model */,
 				E4302B162038A0CC00D787E6 /* AppDelegate.swift */,
 				E4302B182038A0CC00D787E6 /* ViewController.swift */,
 				E4302B1A2038A0CC00D787E6 /* Main.storyboard */,
@@ -259,7 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E412CA202075BE1E007CEA15 /* Forecast.swift in Sources */,
+				E412CA172073D0E8007CEA15 /* Cities.swift in Sources */,
 				E4302B192038A0CC00D787E6 /* ViewController.swift in Sources */,
+				E412CA252076E33C007CEA15 /* HolidayResult.swift in Sources */,
+				E412CA1C20743CD0007CEA15 /* WeatherService.swift in Sources */,
+				E412CA152073D0AB007CEA15 /* Weather.swift in Sources */,
+				E412CA2320767A7E007CEA15 /* ForcastBO.swift in Sources */,
+				E412CA192073D336007CEA15 /* Temperature.swift in Sources */,
 				E4302B172038A0CC00D787E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
